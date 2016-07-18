@@ -1,0 +1,23 @@
+{
+  "name": "moodring",
+  "version": "1.0.0",
+  "description": "Mood_Ring =========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patriciacarbajal/Mood_Ring.git"
+  },
+  "author": "patricia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raccoons-2014/Mood_Ring/issues"
+  },
+  "homepage": "https://github.com/raccoons-2014/Mood_Ring",
+  "dependencies": {
+    "browserify": "^6.3.4",
+    "browserify-incremental": "^1.5.0"
+  }
+}

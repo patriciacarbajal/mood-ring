@@ -1,0 +1,10 @@
+
+<div id="big-ring" class="slide">
+  <h1 id = 'homepage'>mood ring</h1>
+  <div class="glowing-ring happy"  data-mood="Happy"><div id="mood-text"><%= link_to 'happy', welcome_show_path(:mood => "Happy") %></div></div></a>
+  <div class="glowing-ring melancholy" data-mood="Melancholy" ><div id="mood-text"><%= link_to 'sad', welcome_show_path(:mood => "Melancholy") %></div></div></a>
+  <div class="glowing-ring excited"  data-mood="Excited" ><div id="mood-text"><%= link_to 'excited', welcome_show_path(:mood => "Excited") %></div></div></a>
+  <div class="glowing-ring chill" data-mood="Chill" ><div id="mood-text"><%= link_to 'chill', welcome_show_path(:mood => "Chill") %></div></div></a>
+  <div class="glowing-ring angry"  data-mood="Angry" > <div id="mood-text"><%= link_to 'angry', welcome_show_path(:mood => "Angry") %></div></div></a>
+  <div class="glowing-ring sleepy" data-mood="Sleepy" ><div id="mood-text"><%= link_to 'sleepy', welcome_show_path(:mood => "Sleepy") %></div></div></a>
+</div>

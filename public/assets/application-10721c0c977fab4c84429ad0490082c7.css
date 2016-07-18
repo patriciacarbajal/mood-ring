@@ -1,0 +1,147 @@
+/*.btn, .emotion {
+  background:#f7c956;
+  background:-moz-linear-gradient(top,#f7c956 0%,#e8b551 100%);
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#f7c956),color-stop(100%,#e8b551));
+  background:-webkit-linear-gradient(top,#f7c956 0%,#e8b551 100%);
+  background:-o-linear-gradient(top,#f7c956 0%,#e8b551 100%);
+  background:-ms-linear-gradient(top,#f7c956 0%,#e8b551 100%);
+  background:linear-gradient(top,#f7c956 0%,#e8b551 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f7c956', endColorstr='#e8b551',GradientType=0);
+  padding:10px 15px;
+  color:#fff;
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:16px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border:1px solid #e8b551;
+  margin: 15px;
+}*/
+
+#sad {
+  background: #660099;
+}
+
+#happy {
+  background: #FF6600;
+}
+
+#angry {
+  background: red;
+}
+
+#angry:hover, #happy:hover, #sad:hover {
+  background: #484848;
+}
+
+.btn:hover, .emotion:hover {
+  background: #f2bd00;
+  background-image: -webkit-linear-gradient(top, #f2bd00, #f2bd00);
+  background-image: -moz-linear-gradient(top, #f2bd00, #f2bd00);
+  background-image: -ms-linear-gradient(top, #f2bd00, #f2bd00);
+  background-image: -o-linear-gradient(top, #f2bd00, #f2bd00);
+  background-image: linear-gradient(to bottom, #f2bd00, #f2bd00);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:focus, .emotion:focus {
+  outline:none;
+}
+
+.search input[type=submit] {
+  padding:10px 15px;
+  margin: 7px;
+  background:#c2cc94;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.search{
+  width:350px;
+height:auto;
+margin:50px auto 0;
+padding:50px;
+background-image: url('http://1.bp.blogspot.com/-R6n2hcg-vck/UN1UOx_dA1I/AAAAAAAAD5E/qdF4sA6SAPM/s1600/repeating_light_gray_texture.jpg');
+color:#333;
+border-radius:40px 0 40px 0;
+font-family: 'Telex', sans-serif;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+
+}
+
+.search input[type="text"].focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+  outline: none;
+}
+
+.search input:focus, textarea:focus {
+  outline-color: #9681a8;
+}
+html{
+  background: url('http://www.strangebeaver.com/wp-content/uploads/2013/02/wpw26/9.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Telex', sans-serif;
+  color: white;
+}
+
+.form{
+  margin-left: 50px;
+  margin: 0 auto;
+}
+
+.label{
+  background-color: white;
+  border-radius: 15%;
+  text-align: center;
+  width: auto;
+  display: block;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  text-align: center;
+}
+
+#playlist{
+  background-image: url('http://www.gadgetmac.com/picture/ipad_air_wallpaper_retina_background_b.jpg%3FpictureId%3D18906287');
+  width:600px;
+  height:auto;
+  margin:50px auto 0;
+  padding:50px;
+}
+
+p{
+  font-family: 'Telex', sans-serif;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

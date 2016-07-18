@@ -1,0 +1,432 @@
+html{
+  overflow:hidden;
+  background-color: black;
+  color: white;
+  font-family: 'Telex', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#playlist{
+  background-color: rgba(40, 40, 40, 0.3);
+  bottom: 0;
+  z-index:1;
+  position:absolute;
+  width: 100%;
+  height: 5%;
+  padding: 0.4%;
+  margin: 0;
+}
+
+#progressBar {
+  background-color: rgb(211, 203, 203);
+  width: 0px;
+
+   height:3px;
+}
+
+.slide {
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+#slides div {
+  background-color: rgba(40, 40, 40, 0.3);
+  width: 100%;
+  display: none;
+  padding: 2%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#songList {
+
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  width: 95%;
+  height: 80%;
+  overflow: scroll;
+}
+
+.pauseReview {
+  display:none;
+}
+
+.fetchedSongs li img:hover {
+-webkit-filter: invert(100%);
+cursor: pointer;
+}
+
+
+
+#three {
+  z-index:-10;
+}
+
+
+#soundcloud{
+  cursor: pointer;
+  margin: 0px 0% 0%;
+  float:right;
+  margin-right: 20px;
+}
+
+.player-control {
+  margin:5%;
+}
+
+.mood-control {
+  margin-top: 30%;
+}
+
+#play, #pause {
+  position:absolute;
+  margin-left: 10px
+}
+
+#play {
+  display:none;
+}
+
+#next {
+  float:right;
+  margin-right: 20px;
+}
+
+.emotion, .moodChoice {
+background: rgb(45, 44, 44);
+height: 40px;
+min-width: 200px;
+line-height: 24px;
+font-size: 16px;
+text-align: center;
+box-shadow: 2px 2px 2px rgba(255,255,255,0.2);
+border-radius: 20px
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  display: inline-block;
+  margin: 15px 10px;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.moodChoice:hover {
+  background: rgb(168, 164, 164);
+}
+
+#moodSelection {
+  display: none;
+}
+
+#enterSong {
+  position: absolute;
+  right: 15px;
+}
+
+#chooseMood {
+  top: .5em;
+  width: 55px;
+  height: 55px;
+  outline: none;
+}
+
+#chooseMood, #hide {
+  position: absolute;
+  left: 15px;
+}
+#hide img{
+  left: 15px;
+  position:absolute;
+}
+
+#all-controls {
+  float:left;
+  width:100px;
+  margin-top: 10px;
+  display: none;
+}
+
+h3 {
+ width:80%;
+ left: 10%;
+ position:absolute;
+ margin-top:0.8%;
+}
+
+li {
+  padding-right: 1%;
+  text-align: left;
+  list-style: none;
+}
+
+.fetchedSongs li {
+  display: inline;
+}
+
+#start-animation {
+  display: none;
+}
+
+.glowing-ring {
+  position: absolute;
+  border-radius: 50%;
+    width: 20%;
+    height: 20%;
+}
+
+.glowing-ring.happy {
+    top: -10%;
+    right: 40%;
+    color: #f0f;
+      box-shadow:
+        inset 0 0 50px #f0f,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #f0f;
+
+}
+
+.glowing-ring.angry {
+
+  right: 0%;
+  bottom: 15%;
+  color: #cc3333;
+  box-shadow:
+        inset 0 0 50px #cc3333,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px #cc3333,
+        10px 0 80px #cc3333;
+
+}
+
+.glowing-ring.chill {
+  left: -2%;
+    top: 15%;
+    color: #66cc99;
+  box-shadow:
+        inset 0 0 50px #66cc99,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px  #66cc99,
+        10px 0 80px  #66cc99;
+
+}
+
+.glowing-ring.melancholy {
+    top: 15%;
+  right: -2%;
+  color: #0ff;
+      box-shadow:
+        inset 0 0 50px #0ff,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px #0ff,
+        10px 0 80px #0ff;
+}
+
+.glowing-ring.excited {
+    left: 0%;
+    bottom: 15%;
+    color: #FF6;
+  box-shadow:
+        inset 0 0 50px #FF6,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px #FF6,
+        10px 0 80px #FF6;
+
+}
+
+.glowing-ring.sleepy {
+   right: 40%;
+  bottom: -10%;
+  color: #333399;
+  box-shadow:
+        inset 0 0 50px #333399,
+        inset 20px 0 80px #000000,
+        inset -20px 0 80px #000000,
+        inset 20px 0 300px #000000,
+        inset -20px 0 300px #000000,
+        0 0 50px #fff,
+        -10px 0 80px #333399,
+        10px 0 80px #333399;
+
+}
+
+#big-ring {
+  font: normal 18px/normal "Varela", Helvetica, sans-serif;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  box-shadow:
+        inset 0 0 100px #fff,
+        0 0 50px #fff,
+        -10px 0 80px #fff,
+        10px 0 80px #fff;
+}
+
+#inputSong, #addSong, #songMood {
+  padding-top: 30px;
+  padding-left: 10px;
+  text-align: center;
+  height: 350px;
+  width: 500px;
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 50px;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  }
+
+
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 1px #fff;
+  background-color: rgba(40, 40, 40, 0.3);
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+  color:white;
+  width: 40%;
+  height:20px;
+  margin:60px;
+  font-size: 1em;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  box-shadow: inset 2px 2px 2px 0 #fff;
+  outline:none;
+}
+
+
+#inputSong h1  {
+  margin: 40px auto 10px auto;
+}
+
+/*scrollbar-face-color: #b46868;*/
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    color: black;
+    face-color: #b46868;
+
+
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,.5);
+
+   /* -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);*/
+}
+::-webkit-scrollbar-corner {
+  color:rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-track {
+   max-height: 300px;
+}
+
+#mood-text {
+  padding-top: 35%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#homepage {
+  /*color: white;*/
+  color: black !important;
+  padding-top: 45%;
+  text-decoration: normal;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff;
+}
+
+
+.glowing-ring:hover {
+  transform: scale(1.4);
+}
+
+#mood-ring{
+  float:left;
+  position:absolute;
+  left: 37%;
+  bottom: 40%;
+  outline: none;
+  cursor: default;
+}
+
+.modal {
+  top: 20% !important;
+  margin-left: -30% !important ;
+  width: 35%;
+}
+
+#mood-popup {
+  display: none;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ *= require_jquery.modal
+ */
+

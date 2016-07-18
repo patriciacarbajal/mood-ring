@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MoodRing</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" type="text/css"/>
+  <script type="x-shader/x-vertex" id="vertexshader">
+    attribute float size;
+    attribute vec3 pcolor;
+    varying vec3 vColor;
+    void main() {
+      vColor = pcolor;
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+      gl_PointSize = size * ( 200.0 / length( mvPosition.xyz ) );
+      gl_Position = projectionMatrix * mvPosition;
+    }
+  </script>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+    uniform sampler2D texture;
+    varying vec3 vColor;
+    void main() {
+      vec4 outColor = texture2D( texture, gl_PointCoord );
+      gl_FragColor = outColor * vec4( vColor, 1.0 );
+    }
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" type="text/javascript"></script>
+  <script src="https://connect.soundcloud.com/sdk-2.0.0.js"></script>
+  <script>
+  SC.initialize({
+    client_id: "<%=ENV['SOUNDCLOUD_API']%>",
+  });
+  </script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body class="<%= controller_name %> <%= action_name %>">
+  <%= yield %>
+</body>
+
+</html>

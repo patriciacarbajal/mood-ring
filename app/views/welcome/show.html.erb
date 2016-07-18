@@ -1,0 +1,75 @@
+<%= content_tag :div, class: "current_mood", data: {mood: @mood} do %>
+<% end %>
+
+<div id = "visualizer">
+  <div>
+    <a href="#" id="enterSong" class="slide" title="Search For A Song"><%= image_submit_tag("search-12-32.png", class: "mood-control") %></a>
+  </div>
+
+  <div>
+    <a href = '#'><%= image_submit_tag('mood_ring.png', id: 'chooseMood', class: 'slide') %></a>
+
+  </div>
+
+  <div id="three">
+
+  </div>
+
+  <div id="playlist">
+
+    <div id="progressBar"></div>
+
+    <h3 id= "track-title"></h3>
+
+    <div id="all-controls">
+      <a id="play" href="#">
+        <%= image_submit_tag("play-24.png", class: "player-control") %>
+      </a>
+      <a id="pause"  href = "#">
+        <%= image_submit_tag("pause-24.png", class: "player-control") %>
+      </a>
+      <a id="next"  href = "#">
+        <%= image_submit_tag("arrow-31-24.png", class: "player-control") %>
+      </a>
+    </div>
+
+  <img src="/assets/soundcloud.png" id = "soundcloud">
+
+</div>
+
+
+<div class="slide inputSlides" id="inputSong">
+  <a href="#" class="hide" id ="close"><img src='/assets/x-mark-3-16.png'></a>
+  <h1>Search Soundcloud</h1>
+  <h3> to add song to Mood Ring</h3>
+  <form id = "input" method = "get">
+  <input id="titleSearch" type="text" placeholder= "song title, artist, tag, etc." autocomplete= 'off'>
+  </form>
+  <div id= "search-error"></div>
+</div>
+
+<div class="slide inputSlides" id="addSong">
+   <ul class="exitGoBack">
+    <li id = "with-hide-class"><a href="#" class="hide"><img src='/assets/x-mark-3-16.png'></a></li>
+    <li id = "going-back"><a href="#" class="goBack" id="toFirstSlide"><img src='/assets/arrow-58-16.png'></a></li>
+  </ul>
+  <h1>Choose a song to add</h1>
+  <div id = 'songList'></div>
+</div>
+
+<div class="slide inputSlides" id="songMood">
+   <ul class="exitGoBack">
+    <li><a href="#" class="hide"><img src='/assets/x-mark-3-16.png'></a></li>
+    <li><a href="#" class="goBack" id="toSecondSlide"><img src='/assets/arrow-58-16.png'></a></li>
+  </ul>
+  <h1>What mood describes this song?</h1>
+  <button class="moodChoice" id="Happy"><%= link_to 'Happy', welcome_show_path(:mood => "Happy") %></button>
+  <button class="moodChoice" id="Melancholy"><%= link_to 'Melancholy', welcome_show_path(:mood => "Melancholy") %></button>
+  <button class="moodChoice" id="Excited"><%= link_to 'Excited', welcome_show_path(:mood => "Excited") %></button>
+  <button class="moodChoice" id="Chill"><%= link_to 'Chill', welcome_show_path(:mood => "Chill") %></button>
+  <button class="moodChoice" id="Angry"><%= link_to 'Angry', welcome_show_path(:mood => "Angry") %></button>
+  <button class="moodChoice" id="Sleepy"><%= link_to 'Sleepy', welcome_show_path(:mood => "Sleepy") %></button>
+</div>
+
+
+<%= render(:partial => 'homepage') %>
